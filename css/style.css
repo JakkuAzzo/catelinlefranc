@@ -550,6 +550,28 @@ button {
     padding: 20px;
 }
 
+/* Two-column layout for profile & education inside about-text on larger screens */
+.about-text-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.about-text-grid h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .about-text-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
 .about-text .section-title {
     text-align: left;
     margin-bottom: 30px;
@@ -872,11 +894,10 @@ button {
 
 .instagram-grid {
     display: grid;
-    /* Force 5-in-a-row on large screens */
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    max-width: 1600px;
-    margin: 0 auto;
+    /* Larger featured embeds: 3 columns on desktop */
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
 }
 
 .instagram-embed-wrapper {
@@ -906,19 +927,11 @@ button {
 }
 
 /* Responsive Instagram Embeds */
-/* Medium screens: allow 3 per row */
-@media only screen and (max-width: 1200px) {
-    .instagram-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-}
-
 /* Tablets: 2 per row */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
     .instagram-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        grid-template-columns: repeat(2, minmax(320px, 1fr));
+        gap: 24px;
     }
 }
 
