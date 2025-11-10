@@ -1,0 +1,58 @@
+# Node modules (if you add any build tools later)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# MacOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build outputs (if you add a build process)
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Backup files
+*.bak
+*~
+
+# Large image source files (keep optimized versions only)
+# *.psd
+# *.ai
+# *.sketch
+
+# System files
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Optional: Ignore original unoptimized images
+# images/originals/
+# images/raw/

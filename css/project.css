@@ -1,0 +1,369 @@
+/* Project Page Specific Styles */
+
+.project-hero {
+    padding: 150px 0 100px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--bg-white);
+    text-align: center;
+}
+
+.project-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.project-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.project-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.project-content {
+    padding: 80px 0;
+    background: var(--bg-white);
+}
+
+.project-info-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.project-description h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.project-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.project-meta {
+    background: var(--bg-light);
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.meta-item h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.meta-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.gallery-item.wide {
+    grid-column: span 2;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Camera Collection Grid */
+.camera-collection-section {
+    margin: 80px 0;
+}
+
+.camera-collection-section .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 60px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.cameras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.camera-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.camera-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.camera-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.camera-card-image {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.camera-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.camera-card:hover .camera-card-image img {
+    transform: scale(1.05);
+}
+
+.camera-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.camera-card:hover .camera-card-overlay {
+    opacity: 1;
+}
+
+.view-series {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.camera-card-content {
+    padding: 30px;
+}
+
+.camera-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.camera-type {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.camera-desc {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.camera-specs-preview {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.camera-specs-preview span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Process Section */
+.project-process {
+    margin: 80px 0;
+    padding: 60px 0;
+    background: var(--bg-light);
+    border-radius: 12px;
+}
+
+.project-process h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.process-step {
+    text-align: center;
+}
+
+.process-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.process-step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.process-step p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive Camera Collection */
+@media (max-width: 768px) {
+    .cameras-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .camera-card-image {
+        height: 250px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+}
+
+/* Technical Details Section */
+.technical-details {
+    margin: 60px 0;
+    padding: 40px;
+    background: var(--bg-light);
+    border-radius: 8px;
+}
+
+.technical-details h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tech-item h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.tech-item p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Responsive Design for Project Pages */
+@media (max-width: 768px) {
+    .project-info-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item.wide {
+        grid-column: span 1;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-navigation {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-navigation .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

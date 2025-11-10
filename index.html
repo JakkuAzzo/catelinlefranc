@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catelin Le Franc - Photography Portfolio showcasing artistic vision through vintage cameras and contemporary projects">
+    <meta name="author" content="Catelin Le Franc">
+    <title>Catelin Le Franc | Photography Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Catelin Le Franc</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#instagram-feed" class="nav-link">Instagram</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">
+                <span class="hero-subtitle">Photography by</span>
+                Catelin Le Franc
+            </h1>
+            <p class="hero-description fade-in-delay">Capturing moments through vintage lenses and modern vision</p>
+            <a href="#portfolio" class="btn btn-primary fade-in-delay-2">Explore Work</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">A curated selection of photographic works</p>
+            </div>
+
+            <!-- Portfolio Filter -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Works</button>
+                <button class="filter-btn" data-filter="projects">Projects 2025-26</button>
+                <button class="filter-btn" data-filter="vintage">Vintage Camera</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Recent Works Collection -->
+                <div class="portfolio-item" data-category="projects">
+                    <div class="portfolio-image">
+                        <img src="images/projects20256.jpg" alt="Recent Works" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Recent Works</h3>
+                                <p>Contemporary Projects 2025-26</p>
+                                <a href="projects/recent.html" class="portfolio-link">View Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vintage Camera Experimentations Collection -->
+                <div class="portfolio-item" data-category="vintage">
+                    <div class="portfolio-image">
+                        <img src="images/vintagecameraexp.jpg" alt="Vintage Camera Experimentations" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Vintage Camera Experimentations</h3>
+                                <p>5 Camera Collection</p>
+                                <a href="projects/vintage-camera-experimentations.html" class="portfolio-link">View Collection</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="portfolio-cta">
+                <button class="btn btn-secondary" id="loadMore">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section id="instagram-feed" class="instagram-section">
+        <div class="container">
+            <h2 class="section-title">Featured on Instagram</h2>
+            <p class="section-subtitle">Follow my latest work</p>
+            
+            <div class="instagram-grid">
+                <!-- Instagram Embed 1 -->
+                <div class="instagram-embed-wrapper">
+                    <iframe src="https://www.instagram.com/p/CYWcz6hKtdo/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+
+                <!-- Instagram Embed 2 -->
+                <div class="instagram-embed-wrapper">
+                    <iframe src="https://www.instagram.com/p/CQ6T0O-jckK/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+
+                <!-- Instagram Embed 3 -->
+                <div class="instagram-embed-wrapper">
+                    <iframe src="https://www.instagram.com/p/CYWbCQyqrSL/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+
+                <!-- Instagram Embed 4 -->
+                <div class="instagram-embed-wrapper">
+                    <iframe src="https://www.instagram.com/p/CZth4CyqnVS/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+
+                <!-- Instagram Embed 5 -->
+                <div class="instagram-embed-wrapper">
+                    <iframe src="https://www.instagram.com/p/C0T8ZiKNmVK/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/vintagecameraexp.jpg" alt="Catelin Le Franc">
+                    <div class="about-image-overlay"></div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-description">
+                        As a photographer, I explore the intersection of past and present through my work. 
+                        My journey with vintage cameras allows me to capture contemporary moments with a 
+                        nostalgic quality that transcends time.
+                    </p>
+                    <p class="about-description">
+                        Each camera tells its own story, and through experimentation with these classic 
+                        instruments, I discover unique perspectives and aesthetic possibilities. My work 
+                        celebrates both the technical craft and the artistic vision that photography embodies.
+                    </p>
+                    <div class="about-specialties">
+                        <h3>Specialties</h3>
+                        <ul>
+                            <li>Vintage Camera Photography</li>
+                            <li>Film Photography</li>
+                            <li>Contemporary Projects</li>
+                            <li>Experimental Techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's collaborate on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>Catelin_lefranc@me.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Social Media</h3>
+                            <p>@catelinsphotography / @catelin_arts</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/Catelin_lefranc@me.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New contact from Portfolio Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Catelin Le Franc</h3>
+                    <p>Photography Portfolio</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#instagram-feed">Instagram</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://instagram.com/catelinsphotography" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Photography">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/catelin_arts" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Arts">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Catelin Le Franc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
