@@ -285,6 +285,10 @@ button {
     opacity: 0.9;
 }
 
+/* Show long description by default, hide mobile variant */
+.hero-description.hero-full { display: block; }
+.hero-description.hero-mobile { display: none; }
+
 .scroll-indicator {
     position: absolute;
     bottom: 40px;
@@ -384,9 +388,11 @@ button {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
+    /* Centered fixed 2-column layout on wider screens */
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1100px; /* keeps columns from stretching too wide */
+    margin: 0 auto 50px; /* center the grid */
 }
 
 .portfolio-item {
@@ -826,6 +832,10 @@ button {
         font-size: 1rem;
     }
 
+    /* On small screens, show the concise hero text */
+    .hero-description.hero-full { display: none; }
+    .hero-description.hero-mobile { display: block; }
+
     .portfolio-filters {
         gap: 10px;
     }
@@ -862,9 +872,10 @@ button {
 
 .instagram-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1400px;
+    /* Force 5-in-a-row on large screens */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -873,13 +884,15 @@ button {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    min-height: 710px;
+    min-height: 0; /* let height follow iframe aspect */
 }
 
 .instagram-embed-wrapper iframe {
     width: 100%;
-    max-width: 612px;
-    height: 710px;
+    /* scale down from native 612x710 to fit five across */
+    max-width: 100%;
+    aspect-ratio: 612 / 710;
+    height: auto;
     border: none;
     border-radius: 8px;
     box-shadow: var(--shadow);
@@ -893,9 +906,26 @@ button {
 }
 
 /* Responsive Instagram Embeds */
-@media only screen and (max-width: 768px) {
+/* Medium screens: allow 3 per row */
+@media only screen and (max-width: 1200px) {
+    .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Tablets: 2 per row */
+@media only screen and (max-width: 900px) {
     .instagram-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Phones: 1 per row */
+@media only screen and (max-width: 768px) {
+    .instagram-grid {
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
@@ -916,6 +946,6 @@ button {
         margin-left: 0;
         width: 100%;
         height: auto;
-        min-height: 600px;
+        min-height: 0;
     }
 }
