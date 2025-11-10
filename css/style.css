@@ -517,11 +517,58 @@ button {
     background: var(--bg-white);
 }
 
-.about-content {
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.about-profile h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Education block styles (shared) */
+.about-education {
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Horizontal on large, stacks on small */
+.about-education-horizontal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.about-education-horizontal .edu-item {
+    background: var(--bg-white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+@media (min-width: 769px) {
+    .about-layout {
+        grid-template-columns: 1fr 1fr; /* image left, profile right */
+        gap: 60px;
+    }
+    .about-profile h3 { text-align: left; }
+    .about-education-horizontal {
+        grid-template-columns: repeat(3, 1fr); /* horizontal layout */
+    }
 }
 
 .about-image {
@@ -546,41 +593,8 @@ button {
     background: linear-gradient(135deg, rgba(44, 44, 44, 0.1), rgba(212, 163, 115, 0.1));
 }
 
-.about-text {
-    padding: 20px;
-}
 
-/* Two-column layout for profile & education inside about-text on larger screens */
-.about-text-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: start;
-}
-
-.about-text-grid h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-@media (max-width: 768px) {
-    .about-text-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-
-.about-text .section-title {
-    text-align: left;
-    margin-bottom: 30px;
-}
-
-.about-text .section-title::after {
-    left: 0;
-    transform: none;
-}
+.about-text .section-title { display: none; }
 
 .about-description {
     font-size: 1.1rem;
