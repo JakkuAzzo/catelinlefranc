@@ -59,9 +59,8 @@
 
             <!-- Portfolio Filter -->
             <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All Works</button>
-                <button class="filter-btn" data-filter="projects">Projects 2025-26</button>
-                <button class="filter-btn" data-filter="vintage">Vintage Camera</button>
+                <button class="filter-btn active" data-filter="projects">Projects</button>
+                <button class="filter-btn" data-filter="featured">Featured</button>
             </div>
 
             <!-- Portfolio Grid -->
@@ -81,7 +80,7 @@
                 </div>
 
                 <!-- Vintage Camera Experimentations Collection -->
-                <div class="portfolio-item" data-category="vintage">
+                <div class="portfolio-item" data-category="projects">
                     <div class="portfolio-image">
                         <img src="images/vintagecameraexp.jpg" alt="Vintage Camera Experimentations" loading="lazy">
                         <div class="portfolio-overlay">
@@ -95,20 +94,8 @@
                 </div>
             </div>
 
-            <!-- Load More Button -->
-            <div class="portfolio-cta">
-                <button class="btn btn-secondary" id="loadMore">Load More</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Instagram Feed Section -->
-    <section id="instagram-feed" class="instagram-section">
-        <div class="container">
-            <h2 class="section-title">Featured on Instagram</h2>
-            <p class="section-subtitle">Follow my latest work</p>
-            
-            <div class="instagram-grid">
+            <!-- Instagram Grid (Featured) -->
+            <div class="instagram-grid" id="instagramGrid" style="display: none;">
                 <!-- Instagram Embed 1 -->
                 <div class="instagram-embed-wrapper">
                     <iframe src="https://www.instagram.com/p/CYWcz6hKtdo/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>

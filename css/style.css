@@ -781,7 +781,8 @@ button {
     }
 
     .portfolio-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .about-content {
@@ -894,8 +895,8 @@ button {
 /* Responsive Instagram Embeds */
 @media only screen and (max-width: 768px) {
     .instagram-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .instagram-embed-wrapper {

@@ -89,7 +89,8 @@ function updateActiveNavLink() {
 // =================================
 
 const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
+const portfolioGrid = document.getElementById('portfolioGrid');
+const instagramGrid = document.getElementById('instagramGrid');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -99,19 +100,23 @@ filterButtons.forEach(button => {
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
         
-        // Filter portfolio items with animation
-        portfolioItems.forEach((item, index) => {
-            const category = item.getAttribute('data-category');
-            
-            if (filter === 'all' || category === filter) {
-                setTimeout(() => {
-                    item.classList.remove('hide');
-                    item.style.animation = 'fadeInItem 0.6s ease-out forwards';
-                }, index * 100);
-            } else {
-                item.classList.add('hide');
+        if (filter === 'featured') {
+            // Hide portfolio grid and show Instagram grid
+            if (portfolioGrid) {
+                portfolioGrid.style.display = 'none';
             }
-        });
+            if (instagramGrid) {
+                instagramGrid.style.display = 'grid';
+            }
+        } else {
+            // Show portfolio grid and hide Instagram grid
+            if (portfolioGrid) {
+                portfolioGrid.style.display = 'grid';
+            }
+            if (instagramGrid) {
+                instagramGrid.style.display = 'none';
+            }
+        }
     });
 });
 
